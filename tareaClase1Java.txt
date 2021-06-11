@@ -1,0 +1,9 @@
+Tarea :
+
+Ejercicios:
+
+a)suponga que un individuo desea invertir su capital en un banco y desea saber
+cuanto dinero ganara despues de un mes si el banco paga a razon de 2% mensual en dolares.
+
+b)un maesgtro desea saber que porcentaje de hombre y que porcentaje de mujeres hay en un grupo de 
+estudiante de programacion mobile 
