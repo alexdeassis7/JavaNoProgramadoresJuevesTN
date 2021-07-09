@@ -11,7 +11,6 @@ public class AppPrincipal {
 	public static void main(String[] args) {
 		System.out.println("Inicio de la App");
 		// invocamos al procedimiento que nos muestra el menu de opciones
-
 		mostrarMenuDeOpciones();
 
 		switch (opcionIngresada) {
@@ -19,19 +18,25 @@ public class AppPrincipal {
 			System.out.println("Usted Selecciono la opcion SUMAR");
 			solicitarNumerosAlUsuario();
 			float valorRetornado = sumar();
-			System.out.println("el resultado de la suma es " + valorRetornado);
+			mostrarResultado(valorRetornado, "suma");
 			break;
 		case 2:
 			System.out.println("Usted Selecciono la opcion RESTAR");
 			solicitarNumerosAlUsuario();
+			mostrarResultado(restar(), "resta");
 			break;
 		case 3:
 			System.out.println("Usted Selecciono la opcion MULTIPLICAR");
 			solicitarNumerosAlUsuario();
+			mostrarResultado(multiplicar(), "multiplicacion");
 			break;
 		case 4:
 			System.out.println("Usted Selecciono la opcion DIVIDIR");
 			solicitarNumerosAlUsuario();
+			float retorno = dividir();
+			if (retorno != 0) {
+				mostrarResultado(retorno, "division");
+			}
 			break;
 		default:
 			System.out.println("La Opcion " + opcionIngresada + " No es una opcion Valida!");
@@ -64,4 +69,28 @@ public class AppPrincipal {
 		return resultado;
 	}
 
+	// Funcion
+	public static float restar() {
+		return numero1 - numero2;
+	}
+
+	// Funcion
+	public static float dividir() {
+		if (numero2 == 0) {
+			System.out.println("No se puede dividir por cero en los numeros Reales !");
+			return 0;
+		} else {
+			return numero1 / numero2;
+		}
+	}
+
+	// Funcion
+	public static float multiplicar() {
+		return numero1 * numero2;
+	}
+
+	// Procedimiento
+	public static void mostrarResultado(float resultado, String operacionAritmetica) {
+		System.out.println("el resultado de la " + operacionAritmetica + " es : " + resultado);
+	}
 }
